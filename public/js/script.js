@@ -1,7 +1,7 @@
 function alterarTema() {
     const tema = localStorage.getItem("tema")
     const body = document.querySelector("body")
-    const button = document.querySelector(".temabutton")
+    const button = document.querySelector(".tema-button")
 
     if (tema) {
         let novoTema
@@ -29,13 +29,12 @@ function alterarTema() {
 function verificarTema() {
     const tema = localStorage.getItem("tema")
     const body = document.querySelector("body")
-    const button = document.querySelector(".temabutton")
-    
+    const button = document.querySelector(".tema-button")
+
     if(tema) {
         if (tema ==="dark") {
             body.classList.add("dark")
             button.innerHTML = `<img src="/imagens/sun-icon.png" alt="icone de sol">`
-
         } else {
             body.classList.add("light")
             button.innerHTML = `<img src="/imagens/moon-icon.png" alt="icone de lua">`
